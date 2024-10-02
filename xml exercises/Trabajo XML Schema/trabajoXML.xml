@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<museos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="trabajoXSD.xsd">
+
+  <!-- Museo 1 -->
+    <museo id="01">
+    <restaurado/>
+    <tipo>arte</tipo>
+    <nombre>Museo Federico García Lorca</nombre>
+    <descripcion>El Museo Federico García Lorca creado en 1986, donde podreis ver todo el legado del escrito</descripcion>
+    <fecha>1986</fecha>
+      <Localizacion>
+        <ciudad>Valderrubio</ciudad>
+        <pais>España</pais>
+        <direccion>Calle Poeta Lorca, 10</direccion>
+      </Localizacion>
+      <exposiciones>
+        <exposicion IdExposicion="1">Poesía de Lorca</exposicion>
+        <exposicion IdExposicion="2">Objetos Personales</exposicion>
+      </exposiciones>
+      <horario>
+        <diasAbiertos>Jueves a Sábado</diasAbiertos>
+        <apertura>13:00 - 19:00</apertura>
+      </horario>
+  </museo>
+
+  <!-- Museo 2 -->
+  <museo id="02">
+  <tipo>mixto</tipo>
+    <nombre>Museo de la Alhambra</nombre>
+    <descripcion>Exhibición de arte e historia de la Alhambra, fundado en 1960, donde podremos ver la historia completa de la Alhambra desde sus incios medievales hasta el dia de hoy</descripcion>
+    <fecha>1960</fecha>
+    <Localizacion>
+      <ciudad>Granada</ciudad>
+      <pais>España</pais>
+      <direccion>Calle Alhambra, 1</direccion>
+    </Localizacion>
+    <exposiciones>
+      <exposicion IdExposicion="3">Arte Islámico</exposicion>
+      <exposicion IdExposicion="4">Arquitectura Medieval</exposicion>
+    </exposiciones>
+    <horario>
+      <diasAbiertos>Martes a Miércoles</diasAbiertos>
+      <apertura>09:45 - 17:30</apertura>
+    </horario>
+  </museo>
+  
+  <!-- Museo 3 -->
+<museo id="03"> 
+  <tipo>cientifico</tipo>
+    <nombre>Museo de Ciencias de Granada</nombre>
+    <descripcion>El famoso parque de las ciencias de granada, conocido por todos en la zona, creado en 2015, es posiblemente uno de los museos mas innovadores y curiosos que hay aqui</descripcion>
+    <fecha>2005</fecha>
+    <Localizacion>
+      <ciudad>Granada</ciudad>
+      <pais>España</pais>
+      <direccion>Avenida de la Ciencia, 15</direccion>
+    </Localizacion>
+    <exposiciones>
+      <exposicion IdExposicion="5">Diversión en Física</exposicion>
+      <exposicion IdExposicion="6">Biología Interactiva</exposicion>
+    </exposiciones>
+    <horario>
+      <diasAbiertos>Lunes a Domingo</diasAbiertos>
+      <apertura>13:00 - 23:00</apertura>
+    </horario>
+  </museo>
+  
+</museos>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="email.css"?>
+<collection xmlns="Mymailing">
+<message>
+    <from>
+        <name>John Adams</name>
+        <email>johnadams@gmail.com</email>
+    </from>
+    <to>
+        <name>Mary Edwards</name>
+        <email>maryedwards@gmail.com</email>
+    </to>
+    <subject>Conversation</subject>
+        <content>
+            <paragraph> Hy Mary.</paragraph>
+            <paragraph>I'm writting you in hopes of finding the person who manages the
+            bussines development stragety for your entreprise sales team. If it
+            make sense to talk. Please let me know your calendar look for a 
+            conversation.</paragraph>
+            <paragraph>If there is someone else you suggest I spaek with first, Please
+            let me know.
+            </paragraph>
+        </content>
+    </message>
+</collection>

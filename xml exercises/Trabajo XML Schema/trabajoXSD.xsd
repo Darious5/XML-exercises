@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Define el elemento principal "museos" que puede contener uno o más elementos "museo" -->
+  <xs:element name="museos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="museo" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define la estructura del elemento "museo" con sus atributos y subelementos -->
+  <xs:element name="museo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="restaurado" type="t_vacio" minOccurs="0"/>
+        <xs:element ref="tipo"/>
+        <xs:element name="nombre" type="xs:string"/>
+        <xs:element name="descripcion" type="t_descrip"/>
+        <xs:element name="fecha" type='xs:gYear'/>
+        <xs:element ref="Localizacion"/>
+        <xs:element ref="exposiciones"/>
+        <xs:element ref="horario"/>
+      </xs:sequence>
+      
+      <!-- Define el atributo "id" obligatorio de tipo entero no negativo -->
+      <xs:attribute name="id" type="xs:nonNegativeInteger" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define un tipo complejo llamado "t_vacio" -->
+  <xs:complexType name="t_vacio"/>
+
+  <!-- Define un tipo simple llamado "t_descrip" con restricciones -->
+  <xs:simpleType name="t_descrip">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="300"/><!-- Limita la longitud de la descripción a 300 caracteres -->
+    </xs:restriction>
+  </xs:simpleType>
+    
+  <!-- Define el elemento "Localizacion" con subelementos ciudad, país y dirección -->
+  <xs:element name="Localizacion">
+    <xs:complexType >
+      <xs:all>
+        <xs:element name="ciudad" type="xs:string"/>
+        <xs:element name="pais" type="xs:string"/>
+        <xs:element name="direccion" type="xs:string"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Define el elemento "exposiciones" que puede contener uno o más elementos "exposicion" -->
+  <xs:element name="exposiciones">
+    <xs:complexType >
+      <xs:sequence>
+        <!-- Define la estructura del elemento "exposicion" con atributo opcional "IdExposicion" (identificador de exposicion) -->
+        <xs:element name="exposicion" minOccurs="1" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <!-- Define un atributo opcional llamado "IdExposicion" -->
+                <xs:attribute name="IdExposicion" type="xs:token" use="optional"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+   
+  <xs:element name="tipo">
+    <xs:simpleType>
+      <xs:restriction base="xs:token">
+        <xs:enumeration value="cientifico"/>
+        <xs:enumeration value="arte"/>
+        <xs:enumeration value="historico"/>
+        <xs:enumeration value="mixto"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <!-- Define el elemento "horario" con subelementos "diasAbiertos" y "apertura" -->
+  <xs:element name="horario">
+    <xs:complexType >
+      <xs:sequence>
+        <!-- Define un tipo simple para los días laborables con un patrón específico -->
+        <xs:element name="diasAbiertos">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="(Lunes|Martes|Miércoles|Jueves|Viernes|Sábado|Domingo)( a (Lunes|Martes|Miércoles|Jueves|Viernes|Sábado|Domingo))?"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <!-- Define el tipo simple "t_horas" con un patrón específico para las horas -->
+        <xs:element name="apertura" type="t_horas"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="t_horas">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="([01]\d|2[0-3]):([0-5]\d) - ([01]\d|2[0-3]):([0-5]\d)"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

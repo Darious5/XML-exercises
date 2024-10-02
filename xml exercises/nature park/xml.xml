@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<natural_parks province="granada">
+ <natural_park>
+   <name>Parque Natural Sierra de Huetor</name>
+   <kind_of_park>Reserva natural</kind_of_park>
+   <mountain_chain>
+     <mountain>
+       <name>pico de Majalijar</name>
+       <coordinates>37.305175, -3.493019</coordinates>
+       <altitude unit="meters">1.878</altitude>
+       <prominence unit="meters">639</prominence>
+       <resources>https://sierraysol.com/es/package/senderismo-majalijar/</resources>
+     </mountain>
+     <rivers>
+       <name>rio darro</name>
+       <river_spring>arroyo de Carchite</river_spring>
+       <altitude unit="meters">19</altitude>
+       <resources>https://ws168.juntadeandalucia.es/iaap/revista/2023/03/11/parque-natural-sierra-de-huetor/#:~:text=R%C3%ADos%20Fardes%20y%20Darro,en%20torno%20al%20r%C3%ADo%20Fardes.</resources>
+     </rivers>
+     <swamp>
+       <name></name>
+       <coordinates></coordinates>
+       <altitude></altitude>
+       <resources></resources>
+     </swamp>
+   </mountain_chain>
+  </natural_park>
+  <natural_park>
+   <name></name>
+   <kind_of_park></kind_of_park>
+   <mountain_chain>
+     <mountain>
+       <name></name>
+       <coordinates></coordinates>
+       <altitude></altitude>
+       <prominence></prominence>
+       <resources></resources>
+     </mountain>
+     <rivers>
+       <name></name>
+       <river_spring></river_spring>
+       <altitude></altitude>
+       <resources></resources>
+     </rivers>
+     <swamp>
+       <name></name>
+       <coordinates></coordinates>
+       <altitude></altitude>
+       <resources></resources>
+     </swamp>
+   </mountain_chain>
+ </natural_park>
+</natural_parks>

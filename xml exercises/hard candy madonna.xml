@@ -1,0 +1,21 @@
+<song length="4:47" date-released="2008">
+    <title>give it to me</title>
+    <composers>
+        <composer>
+            <name>Pharrell</name>
+            <surname>Williams</surname>
+        </composer>
+    </composers>
+    <producers>
+        <producer>
+            <name>Pharrell</name>
+            <surname>Williams</surname>
+        </producer>
+    </producers>
+    <artist>Madonna</artist>
+    <disc serial="MADCDHA571281" disc-length="56:13">
+        <title>Hard Candy</title>
+        <date-released>april 19 2008</date-released>
+        <song>give it to me</song>
+    </disc>
+</song>
